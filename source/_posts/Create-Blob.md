@@ -1,11 +1,11 @@
 ---
-title: Create Blob
+title: 博客搭建过程记录，使用Github Pages和Hexo
 date: 2024-03-04 16:17:21
 tags:
 ---
 ## 博客搭建过程记录
 
-求快先Google了一下，直接在Github Pages建博客的方案：Hexo、Jekyll、Hugo等。我机器上有node环境，直接选Hexo。
+求快先Google了一下，流行的Github Pages建博客的方案有：Hexo、Jekyll、Hugo等。我机器上有node环境，直接选Hexo。
 
 ### 安装
 
@@ -17,8 +17,18 @@ yarn
 ```
 
 ### 写博客
-使用`hexo new`命令创建文章
 
+使用`hexo new`命令创建新文章
+
+```shell
+hexo new [layout] <title>
+```
+
+* `layout`指布局，默认有三种：`post`、`page` 和 `draft`，会使用scaffolds文件夹中的对应md文件来创建新文章。
+  * `post`,使用`scaffolds/post.md`
+  * `page`，使用scaffolds/page.md作为模板创建
+  * `draft`，
+* `title`是指文章的名称，如果有空格需要使用引号包围，生成的文件名会将空格替换成“-”。
 
 ## 参考
 
