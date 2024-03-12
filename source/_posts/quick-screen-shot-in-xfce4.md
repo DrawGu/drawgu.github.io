@@ -38,11 +38,11 @@ tags:
 
 ![image-20240305201356715](quick-screen-shot-in-xfce4/image-20240305201356715.png)
 
-于是我Google了一下找到了[superuser.com上的回答](https://superuser.com/a/1690531/1819287)，扫到答案中的命令，哦！`--save`选项不只能指定保存截图的目录，还能直接指定截图的文件名呀，`xfce4-screenshooter -h`中的描述不是很清楚。直接把`xfce4-screenshooter --fullscreen --save ~/Pictures/Screenshots/"Screenshot $(date -d "today" +"%Y-%m-%d %H:%M").png"`配置到Print快捷键中，然后按Print，大功告ch~：
+于是我Google了一下找到了[superuser.com上的回答](https://superuser.com/a/1690531/1819287)，扫到答案中的命令，哦！`--save`选项不止能指定保存截图的目录，还能直接指定截图的文件名呀，`xfce4-screenshooter -h`中的描述不是很清楚。直接把`xfce4-screenshooter --fullscreen --save ~/Pictures/Screenshots/"Screenshot $(date -d "today" +"%Y-%m-%d %H:%M").png"`配置到Print快捷键中，然后按Print，大功告ch~：
 
 ![image-20240305203400005](quick-screen-shot-in-xfce4/image-20240305203400005.png)
 
-不能使用小蚯蚓符~，直接改成相对路径`xfce4-screenshooter --fullscreen --save Pictures/Screenshots/"Screenshot $(date -d "today" +"%Y-%m-%d %H:%M").png"`，然后按Print，大功告成。查看`Pictures/Screenshots`目录，
+看来不能使用小蚯蚓符~，改成相对路径`xfce4-screenshooter --fullscreen --save Pictures/Screenshots/"Screenshot $(date -d "today" +"%Y-%m-%d %H:%M").png"`，然后按Print，大功告成。查看`Pictures/Screenshots`目录，
 
 ```shell
 ❯ ls ~/Pictures/Screenshots
@@ -51,7 +51,7 @@ tags:
 
 收回“大功告成”。
 
-再看了一下上面的[链接](https://superuser.com/a/1690531/1819287)，接受的答案中说了不能直接配置，并提供了方案，放个sh文件中，赋予执行权限，再配到Keyboard中。
+再看了一下上面的[链接](https://superuser.com/a/1690531/1819287)，接受的答案中说了不能直接配置，并提供了方案：放个sh文件中，赋予执行权限，再配到Keyboard中。
 
 1. 将命令放在一个**脚本文件**中，如~/bin/quickshot
 
