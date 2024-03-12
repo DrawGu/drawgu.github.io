@@ -1,15 +1,16 @@
 ---
 title: xfce4下使用截屏键快速截图
 date: 2024-03-05 17:22:48
+categories:
+- [Linux, Xfce]
 tags:
+- 工具
 ---
 ## 背景
 
 要写文档不免要配图，xfce4自带的xfce4-screenshooter功能作为截图工具的话功能还是挺全面的。使用`xfce4-screenshooter -h`命令查看一下这个工具怎么用：
 
 <img src="quick-screen-shot-in-xfce4/xfce4-screenshooter-help.png" alt="help" style="zoom: 67%;" />
-
-
 
 但是它无法简单做到类似GNOME中按截屏键直接保存截屏到某个目录，xfce4默认的行为在Apps->Settings->Keyboard中配置，如下图：
 
