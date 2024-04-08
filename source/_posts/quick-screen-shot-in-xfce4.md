@@ -5,28 +5,31 @@ categories:
 - [Linux, Xfce]
 tags:
 - 工具
+excerpt: 要写文档不免要配图，xfce4自带的xfce4-screenshooter功能作为截图工具的话功能还是挺全面的，但是它无法简单做到类似GNOME中的按Print键直接保存截屏到某个目录；要实现此效果需要做一些配置。
 ---
 ## 背景
 
-要写文档不免要配图，xfce4自带的xfce4-screenshooter功能作为截图工具的话功能还是挺全面的。使用`xfce4-screenshooter -h`命令查看一下这个工具怎么用：
+要写文档不免要配图，xfce4自带的xfce4-screenshooter功能作为截图工具的话功能还是挺全面的，但是它无法简单做到类似GNOME中按Print键直接保存截屏到某个目录。<!--more-->
+
+可以使用`xfce4-screenshooter -h`命令查看一下这个工具怎么用：
 
 <img src="quick-screen-shot-in-xfce4/xfce4-screenshooter-help.png" alt="help" style="zoom: 67%;" />
 
-但是它无法简单做到类似GNOME中按截屏键直接保存截屏到某个目录，xfce4默认的行为在Apps->Settings->Keyboard中配置，如下图：
+xfce4截屏快捷键配置在Apps->Settings->Keyboard中查看，如下图：
 
 ![xfce4-keyboard](quick-screen-shot-in-xfce4/xfce4-keyboard.png)
 
-默认配置会直接唤起xfce4-screenshooter的图形界面：
+默认的配置按Print键会直接唤起xfce4-screenshooter的图形界面：
 
 <img src="quick-screen-shot-in-xfce4/xfce4-screenshooter-gui.png" alt="gui" style="zoom:80%;" />
 
-要一系列点击才能完成截图
+要选择截屏区域、选择截图保存位置一系列点击才能完成截图，不够快捷。
 
 ## 解决方案
 
 ### 1、失败尝试
 
-既然可以在直接在Keyboard设置中设置，把Keyboard中Print对应的Command改成`xfce4-screenshooter -f -s <文件夹路径>`不就可以了
+既然可以在直接在Keyboard设置中设置，把Keyboard中Print快捷键对应的Command改成`xfce4-screenshooter -f -s <文件夹路径>`不就可以了
 
 ![image-20240305200153202](quick-screen-shot-in-xfce4/image-20240305200153202.png)
 
