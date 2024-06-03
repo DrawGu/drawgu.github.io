@@ -3,6 +3,7 @@ title: Kotlin中的inline
 date: 2024-04-15 09:29:16
 tags: 
 - Kotlin
+excerpt: 在C++ 中，使用inline函数理论上可以加速程序运行，因为它们消除了与函数调用关联的开销。 调用函数需要将返回地址推送到堆栈、将参数推送到堆栈、跳转到函数体，然后在函数完成时执行返回指令。 通过inline函数可以消除此过程。
 ---
 # Kotlin中的inline
 

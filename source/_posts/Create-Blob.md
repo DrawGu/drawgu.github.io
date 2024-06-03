@@ -162,6 +162,12 @@ hexo clear
 
 可简写为`hexo cl`
 
+### 一把梭
+
+```bash
+hexo cl && hexo g -d
+```
+
 ## GitHub Pages
 
 1. 将hexo文件夹push到`<GitHub用户名>.github.io`仓库的main分支
